@@ -2,18 +2,18 @@ const API_BASE_URL =
   typeof DELCOM_BASEURL !== 'undefined'
     ? DELCOM_BASEURL
     : 'https://open-api.delcom.org/api/v1'
+  
+  export const getAccessToken = () => {
+     return localStorage.getItem('accessToken')
+   }
 
-export const getAccessToken = () => {
-  return localStorage.getItem('access_token')
-}
-
-export const putAccessToken = (token) => {
-  if (token) {
-    localStorage.setItem('access_token', token)
-  } else {
-    localStorage.removeItem('access_token')
-  }
-}
+   export const putAccessToken = (token) => {
+     if (token) {
+       localStorage.setItem('accessToken', token)
+     } else {
+       localStorage.removeItem('accessToken')
+     }
+   }
 
 const buildUrl = (path, queryParams = {}) => {
   const url = new URL(`${API_BASE_URL}${path}`)
