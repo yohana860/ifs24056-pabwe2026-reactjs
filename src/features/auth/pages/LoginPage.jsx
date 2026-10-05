@@ -65,9 +65,13 @@ const LoginPage = () => {
         dispatch(setUser(user))
       }
 
-      await showSuccessDialog(
+      showSuccessDialog(
         'Login Berhasil',
         'Selamat datang kembali.',
+        {
+          timer: 1200,
+          showConfirmButton: false,
+        },
       )
 
       navigate('/', {

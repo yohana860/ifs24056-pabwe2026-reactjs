@@ -3,12 +3,14 @@ import Swal from 'sweetalert2'
 export const showSuccessDialog = (
   title = 'Berhasil',
   text = '',
+  options = {},
 ) => {
   return Swal.fire({
     icon: 'success',
     title,
     text,
     confirmButtonText: 'OK',
+    ...options,
   })
 }
 
