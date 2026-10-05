@@ -41,9 +41,13 @@ const request = async (
     ...options.headers,
   }
 
-  if (!(body instanceof FormData)) {
-    headers['Content-Type'] = 'application/json'
-  }
+   const isRawBody =
+     body instanceof FormData ||
+     body instanceof URLSearchParams
+
+   if (!isRawBody) {
+     headers['Content-Type'] = 'application/json'
+   }
 
   if (token) {
     headers.Authorization = `Bearer ${token}`
@@ -54,9 +58,9 @@ const request = async (
     {
       method,
       headers,
-      body:
-        body instanceof FormData
-          ? body
+   body:
+     isRawBody
+       ? body
           : body
             ? JSON.stringify(body)
             : undefined,

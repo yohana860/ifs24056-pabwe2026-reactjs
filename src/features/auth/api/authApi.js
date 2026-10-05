@@ -1,10 +1,10 @@
 import { get, post } from '../../../helpers/apiHelper'
 
 export const loginApi = async (email, password) => {
-  return post('/auth/login', {
-    email,
-    password,
-  })
+  return post(
+    '/auth/login',
+    new URLSearchParams({ email, password }),
+  )
 }
 
 export const registerApi = async ({
