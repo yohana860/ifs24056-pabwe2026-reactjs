@@ -116,14 +116,14 @@ const LoginPage = () => {
       >
         <div>
           <label
-            htmlFor="email"
+            htmlFor="login-email-input"
             className="mb-2 block text-sm font-medium text-slate-700"
           >
             Email
           </label>
 
           <input
-            id="email"
+            id="login-email-input"
             type="email"
             value={email}
             onChange={(event) =>
@@ -137,14 +137,14 @@ const LoginPage = () => {
 
         <div>
           <label
-            htmlFor="password"
+            htmlFor="login-password-input"
             className="mb-2 block text-sm font-medium text-slate-700"
           >
             Password
           </label>
 
           <input
-            id="password"
+            id="login-password-input"
             type="password"
             value={password}
             onChange={(event) =>
@@ -157,6 +157,7 @@ const LoginPage = () => {
         </div>
 
         <button
+          id="login-submit-button"
           type="submit"
           disabled={isLoading}
           className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"

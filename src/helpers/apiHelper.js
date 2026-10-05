@@ -1,4 +1,7 @@
-const API_BASE_URL = DELCOM_BASEURL
+   const API_BASE_URL =
+     typeof DELCOM_BASEURL !== 'undefined'
+       ? DELCOM_BASEURL
+       : 'https://open-api.delcom.org/api/v1'
 
 export const getAccessToken = () => {
   return localStorage.getItem('access_token')
