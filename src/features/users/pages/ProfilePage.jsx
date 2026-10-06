@@ -216,7 +216,7 @@ const ProfilePage = () => {
   if (isLoading) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <p className="text-sm font-medium text-slate-500">
+        <p className="text-sm font-medium text-slate-600">
           Memuat profil...
         </p>
       </div>
@@ -238,7 +238,7 @@ const ProfilePage = () => {
           Pengaturan Akun
         </h1>
 
-        <p className="mt-2 text-slate-500">
+        <p className="mt-2 text-slate-600">
           Kelola informasi profil, foto, dan password akun
           Anda.
         </p>
@@ -258,7 +258,7 @@ const ProfilePage = () => {
               {profile?.name || '-'}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               {profile?.email || '-'}
             </p>
           </div>
@@ -271,7 +271,7 @@ const ProfilePage = () => {
           Informasi Profil
         </h2>
 
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-600">
           Perbarui nama dan email akun Anda.
         </p>
 
@@ -337,7 +337,7 @@ const ProfilePage = () => {
           Foto Profil
         </h2>
 
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-600">
           Pilih gambar untuk mengganti foto profil.
         </p>
 
@@ -381,7 +381,7 @@ const ProfilePage = () => {
           Ganti Password
         </h2>
 
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-slate-600">
           Gunakan password baru untuk akun Anda.
         </p>
 

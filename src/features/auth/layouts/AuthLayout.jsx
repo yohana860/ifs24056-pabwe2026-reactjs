@@ -14,7 +14,7 @@ const AuthLayout = () => {
               Lost & Found
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-600">
               Aplikasi pelaporan barang hilang dan ditemukan.
             </p>
           </div>

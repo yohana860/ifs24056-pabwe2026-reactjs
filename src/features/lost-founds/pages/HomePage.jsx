@@ -228,7 +228,7 @@ const HomePage = () => {
             Selamat Datang di Lost & Found
           </h1>
 
-          <p className="mt-3 text-slate-500">
+          <p className="mt-3 text-slate-600">
             {user?.name
               ? `Halo, ${user.name}!`
               : 'Anda berhasil masuk ke aplikasi.'}
@@ -254,7 +254,7 @@ const HomePage = () => {
       {/* Statistik Ringkasan */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-600">
             Total Laporan
           </p>
 
@@ -264,13 +264,13 @@ const HomePage = () => {
               : totalReports}
           </p>
 
-          <p className="mt-2 text-xs text-slate-400">
+          <p className="mt-2 text-xs text-slate-600">
             Semua laporan
           </p>
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-600">
             Barang Hilang
           </p>
 
@@ -280,13 +280,13 @@ const HomePage = () => {
               : lostReports}
           </p>
 
-          <p className="mt-2 text-xs text-slate-400">
+          <p className="mt-2 text-xs text-slate-600">
             Laporan kehilangan
           </p>
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-600">
             Barang Ditemukan
           </p>
 
@@ -296,13 +296,13 @@ const HomePage = () => {
               : foundReports}
           </p>
 
-          <p className="mt-2 text-xs text-slate-400">
+          <p className="mt-2 text-xs text-slate-600">
             Laporan penemuan
           </p>
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-600">
             Selesai
           </p>
 
@@ -312,7 +312,7 @@ const HomePage = () => {
               : completedReports}
           </p>
 
-          <p className="mt-2 text-xs text-slate-400">
+          <p className="mt-2 text-xs text-slate-600">
             Laporan terselesaikan
           </p>
         </div>
@@ -326,13 +326,13 @@ const HomePage = () => {
               Statistik 7 Hari Terakhir
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               Perbandingan laporan barang hilang dan ditemukan.
             </p>
           </div>
 
           {isLoadingStats && (
-            <span className="text-xs font-medium text-slate-400">
+            <span className="text-xs font-medium text-slate-600">
               Memuat statistik...
             </span>
           )}
@@ -347,7 +347,7 @@ const HomePage = () => {
         {!isLoadingStats &&
           !statsError &&
           dailyLostEntries.length === 0 && (
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-slate-600">
               Data statistik harian belum tersedia.
             </p>
           )}
@@ -384,7 +384,7 @@ const HomePage = () => {
                           {date}
                         </span>
 
-                        <span className="text-xs text-slate-400">
+                        <span className="text-xs text-slate-600">
                           Selesai:{' '}
                           {Number(
                             completedLostValue,
@@ -449,13 +449,13 @@ const HomePage = () => {
             Statistik Bulanan
           </h2>
 
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-slate-600">
             Ringkasan laporan berdasarkan bulan.
           </p>
         </div>
 
         {isLoadingStats && (
-          <p className="mt-6 text-sm text-slate-400">
+          <p className="mt-6 text-sm text-slate-600">
             Memuat statistik bulanan...
           </p>
         )}
@@ -463,7 +463,7 @@ const HomePage = () => {
         {!isLoadingStats &&
           !statsError &&
           monthlyLostEntries.length === 0 && (
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-slate-600">
               Data statistik bulanan belum tersedia.
             </p>
           )}
@@ -478,7 +478,7 @@ const HomePage = () => {
                     Barang Hilang
                   </span>
 
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-600">
                     6 bulan terakhir
                   </span>
                 </div>
@@ -496,7 +496,7 @@ const HomePage = () => {
                           key={`lost-${month}`}
                           className="flex items-center gap-3"
                         >
-                          <span className="w-16 text-xs font-medium text-slate-500">
+                          <span className="w-16 text-xs font-medium text-slate-600">
                             {month}
                           </span>
 
@@ -525,7 +525,7 @@ const HomePage = () => {
                     Barang Ditemukan
                   </span>
 
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-600">
                     6 bulan terakhir
                   </span>
                 </div>
@@ -543,7 +543,7 @@ const HomePage = () => {
                           key={`found-${month}`}
                           className="flex items-center gap-3"
                         >
-                          <span className="w-16 text-xs font-medium text-slate-500">
+                          <span className="w-16 text-xs font-medium text-slate-600">
                             {month}
                           </span>
 
@@ -577,7 +577,7 @@ const HomePage = () => {
               Laporan Lost & Found
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               Kelola dan cari laporan barang hilang atau ditemukan.
             </p>
           </div>
@@ -604,6 +604,7 @@ const HomePage = () => {
           />
 
           <select
+            aria-label="Filter status laporan"
             value={statusFilter}
             onChange={(event) =>
               setStatusFilter(event.target.value)
@@ -633,7 +634,7 @@ const HomePage = () => {
 
         {/* Loading */}
         {isLoadingReports && (
-          <div className="mt-6 rounded-xl bg-slate-50 p-6 text-center text-sm text-slate-500">
+          <div className="mt-6 rounded-xl bg-slate-50 p-6 text-center text-sm text-slate-600">
             Memuat laporan...
           </div>
         )}
@@ -642,7 +643,7 @@ const HomePage = () => {
         {!isLoadingReports &&
           lostFounds.length === 0 &&
           !error && (
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-slate-600">
               Belum ada laporan.
             </p>
           )}
@@ -651,7 +652,7 @@ const HomePage = () => {
         {!isLoadingReports &&
           lostFounds.length > 0 &&
           filteredLostFounds.length === 0 && (
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-slate-600">
               Tidak ada laporan yang sesuai dengan filter.
             </p>
           )}

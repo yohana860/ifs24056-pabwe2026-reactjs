@@ -118,7 +118,7 @@ const DetailPage = () => {
   if (isLoading) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <div className="text-sm font-medium text-slate-500">
+        <div className="text-sm font-medium text-slate-600">
           Memuat detail laporan...
         </div>
       </div>
@@ -132,7 +132,7 @@ const DetailPage = () => {
           Data Tidak Ditemukan
         </h2>
 
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-slate-600">
           Detail laporan Lost & Found tidak tersedia.
         </p>
 
@@ -172,7 +172,7 @@ const DetailPage = () => {
               {lostFound.title}
             </h1>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               ID Laporan: #{lostFound.id}
             </p>
           </div>
@@ -195,7 +195,7 @@ const DetailPage = () => {
                 className="h-72 w-full object-cover sm:h-96"
               />
             ) : (
-              <div className="flex h-72 w-full items-center justify-center bg-slate-100 text-sm text-slate-400 sm:h-96">
+              <div className="flex h-72 w-full items-center justify-center bg-slate-100 text-sm text-slate-600 sm:h-96">
                 Tidak ada cover
               </div>
             )}
@@ -248,7 +248,7 @@ const DetailPage = () => {
               </div>
 
               <div className="rounded-2xl bg-slate-50 p-5">
-                <h2 className="text-sm font-bold uppercase tracking-wide text-slate-500">
+                <h2 className="text-sm font-bold uppercase tracking-wide text-slate-600">
                   Pelapor
                 </h2>
 
@@ -264,7 +264,7 @@ const DetailPage = () => {
                       {authorName}
                     </p>
 
-                    <p className="mt-1 text-xs text-slate-500">
+                    <p className="mt-1 text-xs text-slate-600">
                       Pelapor laporan
                     </p>
                   </div>
@@ -274,7 +274,7 @@ const DetailPage = () => {
 
             <div className="grid gap-4 border-t border-slate-200 pt-6 sm:grid-cols-2">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Tanggal Dibuat
                 </p>
 
@@ -284,7 +284,7 @@ const DetailPage = () => {
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Terakhir Diperbarui
                 </p>
 

@@ -77,7 +77,7 @@ const AddModal = ({ isOpen, onClose, onSuccess }) => {
               Tambah Laporan
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               Buat laporan barang hilang atau ditemukan.
             </p>
           </div>
@@ -86,7 +86,7 @@ const AddModal = ({ isOpen, onClose, onSuccess }) => {
             type="button"
             onClick={onClose}
             disabled={isLoading}
-            className="rounded-lg px-3 py-2 text-xl text-slate-400 hover:bg-slate-100 hover:text-slate-700"
+            className="rounded-lg px-3 py-2 text-xl text-slate-600 hover:bg-slate-100 hover:text-slate-700"
           >
             ×
           </button>

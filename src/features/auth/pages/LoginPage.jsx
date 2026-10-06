@@ -100,7 +100,7 @@ const LoginPage = () => {
           Login
         </h1>
 
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-slate-600">
           Masuk ke akun Anda.
         </p>
       </div>
@@ -172,7 +172,7 @@ const LoginPage = () => {
         </button>
       </form>
 
-      <p className="mt-6 text-center text-sm text-slate-500">
+      <p className="mt-6 text-center text-sm text-slate-600">
         Belum punya akun?{' '}
         <Link
           to="/auth/register"

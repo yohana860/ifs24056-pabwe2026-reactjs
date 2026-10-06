@@ -41,17 +41,17 @@ const UsersPage = () => {
   }, [dispatch])
 
   return (
-    <main className="min-h-screen bg-slate-100">
-      <nav className="border-b bg-white">
+    <div className="min-h-screen bg-slate-100">
+      <div className="border-b bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
           <p className="text-lg font-bold text-slate-900">
             Lost & Found
           </p>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-600">
             Daftar Pengguna
           </p>
         </div>
-      </nav>
+      </div>
 
       <section className="mx-auto max-w-6xl px-6 py-10">
         <div className="rounded-2xl bg-white p-8 shadow-sm">
@@ -66,7 +66,7 @@ const UsersPage = () => {
           </div>
 
           {isLoading && (
-            <p className="text-slate-500">
+            <p className="text-slate-600">
               Memuat data pengguna...
             </p>
           )}
@@ -78,7 +78,7 @@ const UsersPage = () => {
           )}
 
           {!isLoading && !error && users.length === 0 && (
-            <p className="text-slate-500">
+            <p className="text-slate-600">
               Belum ada data pengguna.
             </p>
           )}
@@ -125,7 +125,7 @@ const UsersPage = () => {
           )}
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import {
   BrowserRouter,
   Navigate,
@@ -12,14 +13,15 @@ import LostFoundLayout from './features/lost-founds/layouts/LostFoundLayout'
 import LoginPage from './features/auth/pages/LoginPage'
 import RegisterPage from './features/auth/pages/RegisterPage'
 
-import HomePage from './features/lost-founds/pages/HomePage'
-import DetailPage from './features/lost-founds/pages/DetailPage'
-import UsersPage from './features/users/pages/UsersPage'
-import ProfilePage from './features/users/pages/ProfilePage'
+const HomePage = lazy(() => import('./features/lost-founds/pages/HomePage'))
+const DetailPage = lazy(() => import('./features/lost-founds/pages/DetailPage'))
+const UsersPage = lazy(() => import('./features/users/pages/UsersPage'))
+const ProfilePage = lazy(() => import('./features/users/pages/ProfilePage'))
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Suspense fallback={null}>
       <Routes>
         {/* =========================
             AUTH ROUTES
@@ -74,6 +76,7 @@ const App = () => {
           element={<Navigate to="/auth/login" replace />}
         />
       </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }

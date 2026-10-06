@@ -121,7 +121,7 @@ const ChangeCoverModal = ({
               Ganti Cover
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               Pilih gambar baru untuk cover laporan.
             </p>
           </div>
@@ -130,7 +130,7 @@ const ChangeCoverModal = ({
             type="button"
             onClick={onClose}
             disabled={isLoading}
-            className="flex h-9 w-9 items-center justify-center rounded-full text-xl text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-xl text-slate-600 transition hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
             ×
           </button>
@@ -157,7 +157,7 @@ const ChangeCoverModal = ({
               className="block w-full cursor-pointer rounded-xl border border-slate-300 bg-white text-sm text-slate-700 file:mr-4 file:border-0 file:bg-slate-100 file:px-4 file:py-3 file:text-sm file:font-semibold file:text-slate-700 hover:file:bg-slate-200"
             />
 
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-2 text-xs text-slate-600">
               Pilih file gambar untuk dijadikan cover laporan.
             </p>
           </div>

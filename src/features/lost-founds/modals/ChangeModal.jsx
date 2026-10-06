@@ -95,7 +95,7 @@ const ChangeModal = ({
               Edit Laporan
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               Ubah informasi laporan barang.
             </p>
           </div>
@@ -104,7 +104,7 @@ const ChangeModal = ({
             type="button"
             onClick={onClose}
             disabled={isLoading}
-            className="rounded-lg px-3 py-2 text-xl text-slate-400 hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-lg px-3 py-2 text-xl text-slate-600 hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
             ×
           </button>
@@ -195,7 +195,7 @@ const ChangeModal = ({
                   Status Selesai
                 </p>
 
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-slate-600">
                   Tandai laporan jika barang sudah selesai
                   ditangani.
                 </p>
@@ -231,7 +231,7 @@ const ChangeModal = ({
                   Laporan sudah selesai
                 </span>
               ) : (
-                <span className="text-slate-500">
+                <span className="text-slate-600">
                   Laporan belum selesai
                 </span>
               )}

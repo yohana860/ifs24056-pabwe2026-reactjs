@@ -2,18 +2,18 @@ const API_BASE_URL =
   typeof DELCOM_BASEURL !== 'undefined'
     ? DELCOM_BASEURL
     : 'https://open-api.delcom.org/api/v1'
-  
-  export const getAccessToken = () => {
-     return localStorage.getItem('accessToken')
-   }
 
-   export const putAccessToken = (token) => {
-     if (token) {
-       localStorage.setItem('accessToken', token)
-     } else {
-       localStorage.removeItem('accessToken')
-     }
-   }
+export const getAccessToken = () => {
+  return localStorage.getItem('accessToken')
+}
+
+export const putAccessToken = (token) => {
+  if (token) {
+    localStorage.setItem('accessToken', token)
+  } else {
+    localStorage.removeItem('accessToken')
+  }
+}
 
 const buildUrl = (path, queryParams = {}) => {
   const url = new URL(`${API_BASE_URL}${path}`)
@@ -41,13 +41,13 @@ const request = async (
     ...options.headers,
   }
 
-   const isRawBody =
-     body instanceof FormData ||
-     body instanceof URLSearchParams
+  const isRawBody =
+    body instanceof FormData ||
+    body instanceof URLSearchParams
 
-   if (!isRawBody) {
-     headers['Content-Type'] = 'application/json'
-   }
+  if (!isRawBody) {
+    headers['Content-Type'] = 'application/json'
+  }
 
   if (token) {
     headers.Authorization = `Bearer ${token}`
@@ -58,9 +58,9 @@ const request = async (
     {
       method,
       headers,
-   body:
-     isRawBody
-       ? body
+      body:
+        isRawBody
+          ? body
           : body
             ? JSON.stringify(body)
             : undefined,

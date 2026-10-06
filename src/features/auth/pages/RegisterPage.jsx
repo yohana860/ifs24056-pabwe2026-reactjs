@@ -56,7 +56,7 @@ const RegisterPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-slate-100 px-4 py-10">
+    <div className="min-h-screen bg-slate-100 px-4 py-10">
       <div className="mx-auto max-w-md">
         <div className="rounded-2xl bg-white p-8 shadow-sm">
           <div className="mb-8">
@@ -68,7 +68,7 @@ const RegisterPage = () => {
               Register
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-slate-600">
               Buat akun baru untuk menggunakan aplikasi.
             </p>
           </div>
@@ -172,7 +172,7 @@ const RegisterPage = () => {
             </button>
           </form>
 
-          <p className="mt-6 text-center text-sm text-slate-500">
+          <p className="mt-6 text-center text-sm text-slate-600">
             Sudah punya akun?{' '}
             <Link
               to="/login"
@@ -183,7 +183,7 @@ const RegisterPage = () => {
           </p>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
 
