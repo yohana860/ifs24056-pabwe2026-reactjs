@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
 import { uploadLostFoundCoverApi } from '../api/lostFoundApi'
 import {
@@ -202,6 +203,16 @@ const ChangeCoverModal = ({
       </div>
     </div>
   )
+}
+
+ChangeCoverModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onSuccess: PropTypes.func,
+  lostFound: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    cover: PropTypes.string,
+  }),
 }
 
 export default ChangeCoverModal

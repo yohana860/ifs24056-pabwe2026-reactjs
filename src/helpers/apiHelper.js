@@ -1,7 +1,7 @@
 const API_BASE_URL =
-  typeof DELCOM_BASEURL !== 'undefined'
-    ? DELCOM_BASEURL
-    : 'https://open-api.delcom.org/api/v1'
+  typeof DELCOM_BASEURL === 'undefined'
+    ? 'https://open-api.delcom.org/api/v1'
+    : DELCOM_BASEURL
 
 export const getAccessToken = () => {
   return localStorage.getItem('accessToken')
@@ -25,6 +25,18 @@ const buildUrl = (path, queryParams = {}) => {
   })
 
   return url.toString()
+}
+
+const buildBody = (body, isRawBody) => {
+  if (isRawBody) {
+    return body
+  }
+
+  if (body) {
+    return JSON.stringify(body)
+  }
+
+  return undefined
 }
 
 const request = async (
@@ -58,12 +70,7 @@ const request = async (
     {
       method,
       headers,
-      body:
-        isRawBody
-          ? body
-          : body
-            ? JSON.stringify(body)
-            : undefined,
+      body: buildBody(body, isRawBody),
       ...options,
     },
   )
@@ -134,7 +141,6 @@ export const del = (
   path,
   body = null,
   queryParams = {},
-  options = {},
 ) => {
   return request(
     'DELETE',
