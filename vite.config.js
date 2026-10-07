@@ -43,6 +43,11 @@ export default defineConfig(({ mode }) => {
       globals: true,
       environment: 'jsdom',
       setupFiles: './src/setupTests.js',
+      coverage: {
+        include: ['src/math.js'],
+        all: true,
+        reporter: ['text', 'lcov']
+      }
     },
   }
 })

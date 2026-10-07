@@ -1,5 +1,7 @@
+import { add } from './math';
+
 describe('smoke test', () => {
   it('berjalan', () => {
-    expect(1 + 1).toBe(2)
+    expect(add(1, 1)).toBe(2)
   })
 })
