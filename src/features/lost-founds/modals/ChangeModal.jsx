@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 
 import { updateLostFoundApi } from '../api/lostFoundApi'
 import {
@@ -245,4 +244,25 @@ const ChangeModal = ({
               type="button"
               onClick={onClose}
               disabled={isLoading}
-              className="rounded-lg border
+              className="rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Batal
+            </button>
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {isLoading
+                ? 'Menyimpan...'
+                : 'Simpan Perubahan'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default ChangeModal
